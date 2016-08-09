@@ -16,6 +16,7 @@ gem 'oauth2'
 gem 'rails_12factor'
 gem 'nokogiri', '~> 1.6.7.1'
 gem 'turbolinks'
+gem 'httparty'
 
 
 group :development, :test do
@@ -23,7 +24,6 @@ group :development, :test do
 	gem "factory_girl_rails"
 	gem "capybara"
 	gem "guard-rspec"
-	gem 'httparty'
 	gem 'binding_of_caller'
 	gem "sqlite3"
 	gem "awesome_print", require: "ap"

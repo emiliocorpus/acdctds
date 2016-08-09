@@ -1,23 +1,29 @@
 class App extends React.Component {
+
+  handleLinkClick(e) {
+    e.preventDefault()
+    debugger
+  }
+
   render () {
     return (
       <div className="centered main-content">
 
         <div className="links-container">
 
-          <a href="#">
+          <a href="acdc" onClick={this.handleLinkClick}>
             <div className="link debugger-green">
               AC DC
             </div>
           </a>
 
-          <a href="#">
+          <a href="coop" onClick={this.handleLinkClick}>
             <div className="link debugger-green">
               Coop
             </div>
           </a>
 
-          <a href="#">
+          <a href="carr" onClick={this.handleLinkClick}>
             <div className="link debugger-green">
               Carr
             </div>
@@ -31,23 +37,23 @@ class App extends React.Component {
           <div className="row debugger-red">
             
 
-            <div className="col-md-4">
+            <div className="col-md-6">
 
                 <div className="row">
-                  <h3>Total TD'S: </h3>
+                  <h2>Total TD'S: </h2>
                 </div>
 
                 <div className="row">
-                  <h3>Total Games: {this.props.totalGames}</h3>
+                  <h2>Total Games: {this.props.totalGames}</h2>
                 </div>
 
                 <div className="row">
-                  <h3>Pace: 44</h3>
+                  <h2>Pace: 44</h2>
                 </div>
 
             </div>
 
-            <div className="col-md-8 image">
+            <div className="col-md-6 image">
               <img src="assets/ac-dc.jpg" className="content-image" />
             </div>
 
