@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Acdctds</title>
+  <title>AC/DC TDs</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+	<div class=container-fluid>
+		<%= yield %>
+	</div>
 
-<%= yield %>
-
+	<footer class="footer">
+		<div> 
+			All Rights Reserved<br/>
+			<a href="http://www.emiliocorpus.com">@emiliocorpus</a>
+		</div>
+	</footer>
 </body>
 </html>
