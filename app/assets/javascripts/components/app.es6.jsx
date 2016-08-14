@@ -2,7 +2,6 @@ class App extends React.Component {
 
   handleLinkClick(e) {
     e.preventDefault()
-    debugger
   }
 
   render () {
