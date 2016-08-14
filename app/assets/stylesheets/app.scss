@@ -26,6 +26,7 @@ div.centered{
 div.links-container {
 	margin:0 auto;
 	text-align:centered;
+	margin-bottom: 30px;
 }
 
 div.link {
@@ -35,24 +36,41 @@ div.link {
 	padding-right:10%;
 	padding-top:2%;
 	padding-bottom:2%;
+	color:white;
+	font-size:50px;
+}
+
+div.link:hover {
+	color:silver;
+}
+
+a:hover, a:active, a:focus {
+	text-decoration:none;
+}
+
+a:active {
+	color:silver;
+	text-decoration:none;
+}
+a {
+	text-decoration:none;
 }
 
 div.stats-container {
 }
 
+span.stat {
+	color: yellow;
+}
 
 
 div.individual-content{
 	margin:0 auto;
 }
 
-div.image {
-
-}
 
 img.content-image {
-	width:100%;
-	min-width:400px;
+	width:90%;
 	border-radius:10px;
 }
 

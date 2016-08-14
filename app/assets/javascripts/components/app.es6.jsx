@@ -4,7 +4,7 @@ class App extends React.Component {
     super(props);
   
     this.state = {
-      currentTab: 'DC'
+      currentTab: 'D C'
     };
 
     this.handleLinkClick = this.handleLinkClick.bind(this)
@@ -24,25 +24,34 @@ class App extends React.Component {
       var display = []
       display.push(
         <div className="container individual-content" key={2}>
-          <h1>AMARI COOPER</h1>
           <div className="row">
-            <div className="col-md-6 stats-container">
-                <div className="row">
-                  <h2>Touchdowns:  {this.props.stats.amari.receiving_tds}</h2>
-                </div>
-                <div className="row">
-                  <h2>Receptions: {this.props.stats.amari.receptions}</h2>
-                </div>
-                <div className="row">
-                  <h2>Yards:  {this.props.stats.amari.receiving_yards}</h2>
-                </div>
-                <div className="row">
-                  <h2>Avg Yds Per Reception:  {this.props.stats.amari.average_receiving_yards}</h2>
-                </div>
-            </div>
             <div className="col-md-6 image">
               <img src="assets/amari-cooper.jpg" className="content-image" />
             </div>
+            <div className="col-md-6 stats-container">
+                <div className="row">
+                  <h4><span className="stat">Games Played:</span>  {this.props.stats.amari.games_played}</h4>
+                </div>
+                <div className="row">
+                  <h4><span className="stat">Touchdowns:</span> {this.props.stats.amari.receiving_tds}</h4>
+                </div>
+                <div className="row">
+                  <h4><span className="stat">Receptions:</span>{this.props.stats.amari.receptions}</h4>
+                </div>
+                <div className="row">
+                  <h4><span className="stat">Yards:</span> {this.props.stats.amari.receiving_yards}</h4>
+                </div>
+
+                <div className="row">
+                  <h4><span className="stat">Avg Receiving Yards:</span> {this.props.stats.amari.average_receiving_yards}</h4>
+                </div>
+
+                <div className="row">
+                  <h4><span className="stat">Longest Receptions:</span> {this.props.stats.amari.longest_reception}</h4>
+                </div>
+
+            </div>
+            
           </div>
         </div>
     )
@@ -53,39 +62,39 @@ class App extends React.Component {
     var display = []
     display.push(
         <div className="container individual-content" key={1}>
-          <h1>DEREK CARR</h1>
           <div className="row">
-            <div className="col-md-6 stats-container">
-                <div className="row">
-                  <h4>Games Played:  {this.props.stats.derek.games_played}</h4>
-                </div>
-                <div className="row">
-                  <h4>Touchdowns:  {this.props.stats.derek.passing_touchdowns}</h4>
-                </div>
-                <div className="row">
-                  <h4>Completed/Passes: {this.props.stats.derek.completed_passes} / {this.props.stats.derek.pass_attempts}</h4>
-                </div>
-                <div className="row">
-                  <h4>Passer Rating:  {this.props.stats.derek.passer_rating}</h4>
-                </div>
-                <div className="row">
-                  <h4>Passing Yards:  {this.props.stats.derek.passing_yards}</h4>
-                </div>
-                <div className="row">
-                  <h4>Avg Yds Per Pass:  {this.props.stats.derek.average_yards_per_pass}</h4>
-                </div>
-                <div className="row">
-                  <h4>Interceptions: {this.props.stats.derek.interceptions}</h4>
-                </div>
-                <div className="row">
-                  <h4>Sacks: {this.props.stats.derek.sacks}</h4>
-                </div>
-                <div className="row">
-                  <h4>Fumbles/Fumbles Lost: {this.props.stats.derek.fumbles} / {this.props.stats.derek.fumbles_lost}</h4>
-                </div>
-            </div>
+            
             <div className="col-md-6 image">
               <img src="assets/derek-carr.jpg" className="content-image" />
+            </div>
+            <div className="col-md-6 stats-container">
+                <div className="row">
+                  <h4><span className="stat">Games Played:</span> {this.props.stats.derek.games_played}</h4>
+                </div>
+                <div className="row">
+                  <h4><span className="stat">Touchdowns:</span> {this.props.stats.derek.passing_touchdowns}</h4>
+                </div>
+                <div className="row">
+                  <h4><span className="stat">Completed/Total Passes:</span> {this.props.stats.derek.completed_passes} / {this.props.stats.derek.pass_attempts}</h4>
+                </div>
+                <div className="row">
+                  <h4><span className="stat">Passer Rating:</span> {this.props.stats.derek.passer_rating}</h4>
+                </div>
+                <div className="row">
+                  <h4><span className="stat">Passing Yards:</span> {this.props.stats.derek.passing_yards}</h4>
+                </div>
+                <div className="row">
+                  <h4><span className="stat">Average Yards per Pass:</span> {this.props.stats.derek.average_yards_per_pass}</h4>
+                </div>
+                <div className="row">
+                  <h4><span className="stat">Interceptions:</span> {this.props.stats.derek.interceptions}</h4>
+                </div>
+                <div className="row">
+                  <h4><span className="stat">Sacks:</span>{this.props.stats.derek.sacks}</h4>
+                </div>
+                <div className="row">
+                  <h4><span className="stat">Fumbles/Fumbles Losts:</span> {this.props.stats.derek.fumbles} / {this.props.stats.derek.fumbles_lost}</h4>
+                </div>
             </div>
           </div>
         </div>
@@ -96,7 +105,7 @@ class App extends React.Component {
 
   render () {
     var displayStats
-    if (this.state.currentTab === 'DC') {
+    if (this.state.currentTab === 'D C') {
       displayStats = this.showDerekStats()
     }
     else {
@@ -107,15 +116,15 @@ class App extends React.Component {
 
         <div className="links-container">
 
-          <a href="ac" onClick={this.handleLinkClick}>
-            <div className="link">
-              AC
+          <a href="ac" onClick={this.handleLinkClick} tabindex="-1">
+            <div className="link" >
+              A C
             </div>
           </a>
 
-          <a href="dc" onClick={this.handleLinkClick}>
-            <div className="link">
-              DC
+          <a href="dc" onClick={this.handleLinkClick} tabindex="-1">
+            <div className="link" >
+              D C
             </div>
           </a>
         </div>

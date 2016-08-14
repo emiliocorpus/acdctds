@@ -15,7 +15,6 @@
  */
 
  body {
- 	min-width:400px;
  	background-color:black;
  	background: url('raiders.jpg') no-repeat center center fixed; 
  	-webkit-background-size: cover;
