@@ -46,14 +46,12 @@ private
   def check_derek_stats
   	last_tbody = Nokogiri::HTML(open("http://www.nfl.com/player/derekcarr/2543499/gamelogs")).css('tbody').last 
   	total_stats = last_tbody.css('tr').last.css('td')
-  	binding.pry
   	current_col = 2
   	stats = []
   	while current_col < 20
   		stats.push(total_stats[current_col].text)
   		current_col += 1
   	end
-  	
   	if stats[0] != Derek.first.games_played
   		Derek.first.update(
   			games_played: stats[0],
@@ -71,9 +69,9 @@ private
   			rushing_attempts: stats[12],
   			rushing_yards: stats[13],
   			average_yards_per_rush: stats[14],
-  			rushing_touchdowns: stats[16],
-  			fumbles: stats[17],
-  			fumbles_lost: stats[18]
+  			rushing_touchdowns: stats[15],
+  			fumbles: stats[16],
+  			fumbles_lost: stats[17]
   		)
   	end	
 
