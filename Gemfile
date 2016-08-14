@@ -14,9 +14,10 @@ gem 'figaro'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'oauth2'
 gem 'rails_12factor'
-gem 'nokogiri', '~> 1.6.7.1'
 gem 'turbolinks'
 gem 'httparty'
+gem 'nokogiri'
+gem 'nokogiri-styles'
 
 
 group :development, :test do
