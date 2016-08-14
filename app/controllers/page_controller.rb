@@ -4,26 +4,13 @@ class PageController < ApplicationController
   def index
   	check_amari_stats
   	check_derek_stats
-  	@amari_stats = Amari.first
+  	@stats = {amari: Amari.first, derek: Derek.first}
   end
 
 private
   # Derek Carr ID = 16311
   # Amari Cooper ID = 16765
   #SCORING DETAILS PER GAME
- 
-
-
-
-  # DESIRED AMARI COOPER STATS
-  # G => GAMES PLAYED
-  # GS => GAMES STARTED
-  # Red => RECEPTIONS
-  # Yds => YARDS
-  # Avg => Average Yards per Catch
-  # Lng => Touchdown
-
-
 
 
 
@@ -66,10 +53,29 @@ private
   		stats.push(total_stats[current_col].text)
   		current_col += 1
   	end
-
-
-
-
+  	
+  	if stats[0] != Derek.first.games_played
+  		Derek.first.update(
+  			games_played: stats[0],
+  			games_started: stats[1],
+  			completed_passes: stats[2],
+  			pass_attempts: stats[3],
+  			completion_percentage: stats[4],
+  			passing_yards: stats[5],
+  			average_yards_per_pass: stats[6],
+  			passing_touchdowns: stats[7],
+  			interceptions: stats[8],
+  			sacks: stats[9],
+  			sack_yardage: stats[10],
+  			passer_rating: stats[11],
+  			rushing_attempts: stats[12],
+  			rushing_yards: stats[13],
+  			average_yards_per_rush: stats[14],
+  			rushing_touchdowns: stats[16],
+  			fumbles: stats[17],
+  			fumbles_lost: stats[18]
+  		)
+  	end	
 
   end
 
