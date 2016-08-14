@@ -5,6 +5,7 @@ class App extends React.Component {
   }
 
   render () {
+    debugger
     return (
       <div className="centered main-content">
 
@@ -39,7 +40,19 @@ class App extends React.Component {
             <div className="col-md-6">
 
                 <div className="row">
-                  <h2>Total TD'S: </h2>
+                  <h2>Total TD'S:  </h2>
+                </div>
+
+                <div className="row">
+                  <h2>Total Games: {this.props.totalGames}</h2>
+                </div>
+
+                <div className="row">
+                  <h2>Pace: 44</h2>
+                </div>
+
+                <div className="row">
+                  <h2>Average Yards:  {this.props.stats.average_receiving_yards}</h2>
                 </div>
 
                 <div className="row">
