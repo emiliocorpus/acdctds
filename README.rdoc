@@ -1,28 +1,4 @@
-== README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+== ACDC STATS
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+{ACDC Stats}[https://acdcstats.herokuapp.com/] is a single page application constructed with Ruby on Rails and React.js that scrapes {NFL.com}[http://www.nfl.com/] to gather data on the statistics of Amari Cooper and Derek Carr. It also utilizes {ReactFlipMove}[https://github.com/joshwcomeau/react-flip-move] to animate the transition between the two players. It is a simple project created to further understand Rails and React.js and serves to document the success of the young offensive core of the Oakland Raiders throughout the seasons.

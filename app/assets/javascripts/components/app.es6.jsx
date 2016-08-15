@@ -5,7 +5,9 @@ class App extends React.Component {
   
     this.state = {
       currentTab: 'D C',
-      tabClasses: {dc: 'active-tab', ac: 'inactive-tab'}
+      tabClasses: {dc: 'active-tab', ac: 'inactive-tab'},
+      isLoading: true,
+      display: false
     };
 
     this.handleLinkClick = this.handleLinkClick.bind(this)
@@ -28,6 +30,14 @@ class App extends React.Component {
       }
       
     }
+  }
+
+  componentDidMount() {
+    debugger
+    this.setState({
+      isLoading: false,
+      display: true
+    })
   }
    
 
@@ -121,6 +131,9 @@ class App extends React.Component {
   }
 
 
+// <!-- creat new component for loading symbols -->
+
+
   render () {
     var displayStats
     if (this.state.currentTab === 'D C') {
@@ -129,6 +142,7 @@ class App extends React.Component {
     else {
       displayStats = this.showAmariStats()
     }
+    debugger
     return (
       <div className="centered main-content">
 
