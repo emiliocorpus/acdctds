@@ -33,11 +33,12 @@ class App extends React.Component {
 
   showAmariStats() {
       var display = []
+      debugger
       display.push(
         <div className="container individual-content" key={2}>
           <div className="row">
             <div className="col-md-6 image">
-              <img src="assets/amari-cooper.jpg" className="content-image" />
+              <img src="assets/amari.jpg" className="content-image" />
             </div>
             <div className="col-md-6 stats-container">
                 <div className="row custom-header">
@@ -53,7 +54,7 @@ class App extends React.Component {
                   <h4><span className="stat">Receptions:</span> {this.props.stats.amari.receptions}</h4>
                 </div>
                 <div className="row custom-row">
-                  <h4><span className="stat">Receiving Yards:</span> {this.props.stats.amari.receiving_yards}</h4>
+                  <h4><span className="stat">Receiving Yards:</span> { this.props.stats.amari.receiving_yards}</h4>
                 </div>
                 <div className="row custom-row">
                   <h4><span className="stat">Longest Reception:</span> {this.props.stats.amari.longest_reception}</h4>
@@ -78,7 +79,7 @@ class App extends React.Component {
           <div className="row">
             
             <div className="col-md-6 image">
-              <img src="assets/derek-carr.jpg" className="content-image" />
+              <img src="assets/derek-min.jpg" className="content-image" />
             </div>
             <div className="col-md-6 stats-container">
                 <div className="row custom-header">
@@ -139,7 +140,7 @@ class App extends React.Component {
             </div>
           </a>
             <div className="links-divider">
-              &#9760;
+              <img className="logo" src="assets/raiders-logo.png" />
             </div>
 
           <a href="#" onClick={this.handleLinkClick} >
